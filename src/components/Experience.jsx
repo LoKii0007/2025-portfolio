@@ -52,7 +52,7 @@ const Card = ({ item, index, darkTheme }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`relative rounded-2xl ${
+      className={`relative rounded-2xl font-mono ${
         darkTheme
           ? "dark-theme-bg dark-theme-shadow"
           : "light-theme-bg light-theme-shadow"

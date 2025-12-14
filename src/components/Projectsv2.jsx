@@ -169,18 +169,18 @@ function Projectsv2() {
           className={`work-project h-screen w-screen flex flex-col justify-center items-center shrink-0 z-10`}
         >
           <div className="main flex">
-            <div className="main-left text-xs font-normal">
+            <div className="main-left text-[6px] md:text-xs font-normal">
               <div className="w-full text-end">SOME</div> <div>SELECTED</div>
             </div>
-            <div className="main-middle text-[130px] font-bold leading-[95px] px-[10px]">
+            <div className="main-middle text-[50px] md:text-[130px] font-bold leading-[30px] md:leading-[95px] px-[10px]">
               PROJECTS
             </div>
-            <div className="main-right text-xs font-normal">
+            <div className="main-right text-[5px] md:text-xs font-normal">
               WEB <br />
               DEVOLOPMENT
             </div>
           </div>
-          <div className="text-center main-bottom text-xs font-normal py-10 px-3">
+          <div className="text-center main-bottom text-[5px] md:text-xs font-normal pt-3 md:py-10 px-3">
             CUSTOMER PROJECTS , PERSONAL PROJECTS <br />
             SOME RESEARCH AND PLAYGROUND.
           </div>
@@ -188,7 +188,7 @@ function Projectsv2() {
 
         <div
           ref={projectSectionRef}
-          className="projects-container flex md:flex-col items-center justify-center min-h-screen z-20 p-12"
+          className="projects-container flex md:flex-col items-center justify-center min-h-screen z-20 p-12 font-mono"
         >
           {projectsList?.map((data, index) => (
             <ProjectCard

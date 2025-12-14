@@ -101,13 +101,15 @@ export default function Contact() {
           <div
             className={`${
               darkTheme
-                ? "light-theme-shadow dark-theme-bg"
+                ? "dark-theme-shadow dark-theme-bg"
                 : "light-theme-shadow light-theme-bg"
-            } contact-left rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
+            } rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
           >
             <div className="contact-top space-y-6">
               <div
-                className={`touch text-center md:text-left ${darkTheme ? "text-white" : "text-black"}`}
+                className={`touch text-center md:text-left ${
+                  darkTheme ? "text-white" : "text-black"
+                }`}
               >
                 Get in touch
               </div>
@@ -143,7 +145,9 @@ export default function Contact() {
                   </label>
                   <input
                     className={`${
-                      darkTheme ? "bg-black/20 text-white focus:ring-black" : "bg-white text-black/80 focus:outline-none"
+                      darkTheme
+                        ? "bg-black/20 text-white focus:ring-black"
+                        : "bg-white text-black/80 focus:outline-none"
                     } p-1 rounded-md resize-none`}
                     type="text"
                     required
@@ -168,7 +172,9 @@ export default function Contact() {
                     value={formData.email}
                     name="email"
                     className={`${
-                      darkTheme ? "bg-black/20 text-white focus:ring-black" : "bg-white text-black/80 focus:outline-none"
+                      darkTheme
+                        ? "bg-black/20 text-white focus:ring-black"
+                        : "bg-white text-black/80 focus:outline-none"
                     } p-1 rounded-md resize-none`}
                     id="email"
                     placeholder="someone@gmail.com"
@@ -189,8 +195,10 @@ export default function Contact() {
                     name="message"
                     placeholder="Leave a message"
                     className={`${
-                      darkTheme ? "bg-black/20 text-white focus:ring-black" : "bg-white text-black/80 focus:outline-none"
-                    } p-1 rounded-md resize-none`}
+                      darkTheme
+                        ? "bg-black/20 text-white focus:ring-black"
+                        : "bg-white text-black/80 focus:outline-none"
+                    } p-1 rounded-md `}
                     id="message"
                   />
                 </div>
@@ -245,7 +253,9 @@ export default function Contact() {
                       window.open(item.value, "_blank");
                     }
                   }}
-                  className="rounded-[16px] py-3 flex w-full bg-gray-200 items-center cursor-pointer"
+                  className={`rounded-[16px] py-3 flex w-full ${
+                    !darkTheme ? "bg-gray-200 text-black" : "bg-black/20 text-white"
+                  } items-center cursor-pointer`}
                 >
                   <div className="icon px-4">{item.icon}</div>
                   <div className="info">

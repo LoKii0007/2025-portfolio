@@ -76,14 +76,17 @@ const Navbar = () => {
   /* ---------------------------------- */
   /* Animations                         */
   /* ---------------------------------- */
-  const navbarVariants = useMemo(() => ({
-    hidden: {
-      y: isMobile ? 150 : -150,
-    },
-    visible: {
-      y: 0,
-    },
-  }), [isMobile]);
+  const navbarVariants = useMemo(
+    () => ({
+      hidden: {
+        y: isMobile ? 150 : -150,
+      },
+      visible: {
+        y: 0,
+      },
+    }),
+    [isMobile]
+  );
 
   const mobileItemsVariants = {
     hidden: {
@@ -106,8 +109,9 @@ const Navbar = () => {
   /* ---------------------------------- */
   return (
     <nav
-      className={`fixed z-200 w-screen flex justify-center ${isMobile ? "bottom-4" : "top-4"
-        }`}
+      className={`fixed z-200 w-screen flex justify-center ${
+        isMobile ? "bottom-4" : "top-4"
+      }`}
     >
       <motion.div
         variants={navbarVariants}
@@ -126,8 +130,11 @@ const Navbar = () => {
             width: isMobile ? "92vw" : "80vw",
           }}
           transition={{ duration: 0.45, ease: "easeInOut" }}
-          className={`overflow-hidden custom-navbar rounded-[30px] shadow-lg flex flex-col ${darkTheme ? "bg-[#212529]" : "bg-[whitesmoke]"
-            }`}
+          className={`overflow-hidden rounded-[30px] shadow-lg flex flex-col ${
+            darkTheme
+              ? "dark-theme-bg dark-theme-shadow"
+              : "light-theme-bg light-theme-shadow"
+          }`}
         >
           {/* ---------------- Mobile ---------------- */}
           {isMobile ? (
@@ -140,16 +147,19 @@ const Navbar = () => {
                   className="flex flex-col gap-1.5"
                 >
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "rotate-45 translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "rotate-45 translate-y-2" : ""}`}
                   />
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "opacity-0" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "opacity-0" : ""}`}
                   />
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "-rotate-45 -translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "-rotate-45 -translate-y-2" : ""}`}
                   />
                 </button>
 
@@ -159,8 +169,9 @@ const Navbar = () => {
                   className="h-6 overflow-hidden"
                 >
                   <div
-                    className={`flex flex-col transition-transform duration-300 ${darkTheme ? "-translate-y-6" : "translate-y-0"
-                      }`}
+                    className={`flex flex-col transition-transform duration-300 ${
+                      darkTheme ? "-translate-y-6" : "translate-y-0"
+                    }`}
                   >
                     <Sun size={24} />
                     <Moon size={24} className="text-white" />
@@ -188,8 +199,9 @@ const Navbar = () => {
                         onClick={() => {
                           if (item.view) setHandleView(item.view);
                         }}
-                        className={`text-lg font-medium cursor-pointer ${darkTheme ? "text-white" : "text-black"
-                          }`}
+                        className={`text-lg font-medium cursor-pointer ${
+                          darkTheme ? "text-white" : "text-black"
+                        }`}
                       >
                         {item.label}
                       </motion.div>
@@ -206,8 +218,9 @@ const Navbar = () => {
                 className="h-6 overflow-hidden"
               >
                 <div
-                  className={`flex flex-col transition-transform duration-300 ${darkTheme ? "-translate-y-6" : "translate-y-0"
-                    }`}
+                  className={`flex flex-col transition-transform duration-300 ${
+                    darkTheme ? "-translate-y-6" : "translate-y-0"
+                  }`}
                 >
                   <Sun size={24} />
                   <Moon size={24} className="text-white" />
@@ -218,13 +231,12 @@ const Navbar = () => {
                 {navItems.map((item) => (
                   <div
                     key={item.label}
-                    onClick={() =>
-                      item.view && setHandleView(item.view)
-                    }
-                    className={`cursor-pointer px-3 py-1 rounded-full transition ${darkTheme
+                    onClick={() => item.view && setHandleView(item.view)}
+                    className={`cursor-pointer px-3 py-1 rounded-full transition ${
+                      darkTheme
                         ? "text-white hover:bg-white/10"
                         : "text-black hover:bg-black/10"
-                      }`}
+                    }`}
                   >
                     {item.label}
                   </div>

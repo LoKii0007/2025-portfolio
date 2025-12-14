@@ -99,24 +99,32 @@ const Portfolio = () => {
                 transition={{
                   duration: 0.5,
                 }}
-                className="portfolio-desc flex flex-col cursor-pointer"
+                className="portfolio-desc flex flex-col cursor-pointer px-6 md:px-0"
               >
                 <div
                   className={`${
-                    darkTheme ? "dark-theme-stroke" : "light-theme-stroke"
-                  } desc-1 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear`}
+                    darkTheme
+                      ? "[-webkit-text-stroke:0.4px_white] md:[-webkit-text-stroke:1px_white]"
+                      : "[-webkit-text-stroke:0.4px_#212529] md:[-webkit-text-stroke:1px_#212529]"
+                  } desc-1 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear ${
+                    darkTheme ? "before:text-white" : "before:text-[#212529]"
+                  }`}
                   id="portfolio-desc"
                   data-text="Hi i'm"
                 >
                   Hi i'm{" "}
-                  <span className="name text-[rgba(161,196,253,1)] [-webkit-text-stroke:1px black] before:z-20 before:text-[rgba(161,196,253,1)]">
+                  <span className="name text-[rgba(161,196,253,1)] [-webkit-text-stroke:0.4px_black] md:[-webkit-text-stroke:1px_black] before:z-20 before:text-[rgba(161,196,253,1)]">
                     Lokesh
                   </span>
                 </div>
                 <div
                   className={`${
-                    darkTheme ? "dark-theme-stroke" : "light-theme-stroke"
-                  } desc-2 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear`}
+                    darkTheme
+                      ? "[-webkit-text-stroke:0.4px_white] md:[-webkit-text-stroke:1px_white]"
+                      : "[-webkit-text-stroke:0.4px_#212529] md:[-webkit-text-stroke:1px_#212529]"
+                  } desc-2 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear ${
+                    darkTheme ? "before:text-white" : "before:text-[#212529]"
+                  }`}
                   id="portfolio-desc"
                   data-text={`A ${title}`}
                 >
@@ -124,8 +132,12 @@ const Portfolio = () => {
                 </div>
                 <div
                   className={`${
-                    darkTheme ? "dark-theme-stroke" : "light-theme-stroke"
-                  } desc-3 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear`}
+                    darkTheme
+                      ? "[-webkit-text-stroke:0.4px_white] md:[-webkit-text-stroke:1px_white]"
+                      : "[-webkit-text-stroke:0.4px_#212529] md:[-webkit-text-stroke:1px_#212529]"
+                  } desc-3 uppercase relative text-transparent text-[32px] md:text-[50px] lg:text-[70px] font-bold transition-all duration-500 ease-in-out before:content-[attr(data-text)] before:w-0 before:absolute before:overflow-hidden before:transition-all before:duration-300 before:ease-out before:z-10 before:whitespace-nowrap hover:before:w-full hover:before:transition-all hover:before:duration-500 hover:before:ease-linear ${
+                    darkTheme ? "before:text-white" : "before:text-[#212529]"
+                  }`}
                   id="portfolio-desc"
                   data-text="Engineer."
                 >
@@ -140,7 +152,7 @@ const Portfolio = () => {
                 className="mt-8 flex flex-col gap-6"
               >
                 {/* Buttons */}
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-col md:flex-row">
                   <button
                     onClick={() => {
                       window.scrollTo({
@@ -150,8 +162,8 @@ const Portfolio = () => {
                     }}
                     className={`px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 ${
                       darkTheme
-                        ? "bg-white text-black hover:bg-gray-200"
-                        : "bg-black text-white hover:bg-gray-800"
+                        ? "light-theme-shadow light-theme-bg text-black"
+                        : "dark-theme-shadow dark-theme-bg text-white"
                     }`}
                   >
                     View Projects
@@ -163,10 +175,10 @@ const Portfolio = () => {
                         behavior: "smooth",
                       });
                     }}
-                    className={`px-8 py-3 rounded-full border font-semibold transition-all hover:bg-opacity-10 ${
+                    className={`px-8 py-3 rounded-full font-semibold transition-all hover:bg-opacity-10 ${
                       darkTheme
-                        ? "border-white text-white hover:bg-white hover:text-black"
-                        : "border-black text-black hover:bg-black hover:text-white"
+                        ? "dark-theme-shadow dark-theme-bg text-white"
+                        : "light-theme-shadow light-theme-bg text-black"
                     }`}
                   >
                     Contact Me
@@ -177,7 +189,7 @@ const Portfolio = () => {
                   variants={conatinerVariants}
                   initial="hidden"
                   animate="show"
-                  className="flex gap-6 items-center mt-2 ms-6"
+                  className="flex gap-6 items-center mt-2 ms-6 justify-center md:justify-start"
                 >
                   {socialLinks.map((link, index) => (
                     <motion.div

@@ -35,7 +35,7 @@ function Section3() {
       <div
         className={` font-mono ${
           darkTheme ? "dark-theme-bg" : "light-theme-bg"
-        } word h-screen z-[100] text-[150px] md:text-[210px] font-bold leading-[150px] md:leading-[230px] whitespace-normal md:whitespace-nowrap overflow-hidden flex justify-center items-center text-center`}
+        } word h-screen z-[100] text-[100px] md:text-[210px] font-bold leading-[120%] md:leading-[230px] whitespace-normal md:whitespace-nowrap overflow-hidden flex justify-center items-center text-center`}
       >
         <div
           className={`${
