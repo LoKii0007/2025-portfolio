@@ -17,7 +17,7 @@ const Home = () => {
       <Section3 />
       <Projectsv2 />
       <ExperienceSection />
-      <SkillsSection />
+      {/* <SkillsSection /> */}
       <Contact />
     </>
   );
