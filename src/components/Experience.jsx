@@ -10,8 +10,13 @@ const experiences = [
     role: "Interactive Full Stack Developer",
     company: "Marqueascendia",
     period: "Sep 2024 - Jul 2025",
-    description:
-      "Designed and built full-stack SaaS products and internal dashboards for Marqueascendia. Worked on admin panels, payment flows, invoice generation systems, and role-based dashboards that allowed admins to manage users, pricing, subscriptions, and application data in real time. Implemented secure backend APIs, database schemas, and frontend interfaces, owning features end-to-end from architecture to deployment.",
+    description: [
+      "Designed and built full-stack SaaS products and internal dashboards for Marqueascendia",
+      "Worked on admin panels, payment flows, invoice generation systems, and role-based dashboards",
+      "Enabled admins to manage users, pricing, subscriptions, and application data in real time",
+      "Implemented secure backend APIs, database schemas, and frontend interfaces",
+      "Owned features end-to-end from architecture to deployment",
+    ],
     skills: [
       "React",
       "Next.js",
@@ -27,11 +32,16 @@ const experiences = [
 
   {
     id: 2,
-    role: "Freelance Full Stack Developer",
+    role: "Freelance Web Developer",
     company: "Self-Employed",
     period: "2023 - Present",
-    description:
-      "Delivered end-to-end web solutions for startups, creators, and small businesses as a freelance developer. Built high-performance websites, dashboards, and custom web applications with a strong focus on clean UI, smooth animations, and scalable architecture. Handled everything from requirement gathering and UI development to backend APIs, deployment, and post-launch support.",
+    description: [
+      "Crafted immersive frontend and storytelling websites for startups, creators, and brands",
+      "Built visually rich, high-performance websites focused on narrative flow and user engagement",
+      "Emphasized clean UI, smooth animations, and meaningful micro-interactions",
+      "Translated ideas and brand stories into interactive web experiences",
+      "Delivered polished, production-ready sites with ongoing improvements and refinements",
+    ],    
     skills: [
       "React",
       "Next.js",
@@ -59,7 +69,7 @@ const Card = ({ item, index, darkTheme }) => {
       }`}
     >
       <div
-        className={`md:flex items-start justify-between group relative p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${
+        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${
           darkTheme
             ? " bg-[#212529]/80 hover:bg-[#212529]"
             : " bg-whitesmoke/80 hover:bg-whitesmoke"
@@ -81,7 +91,7 @@ const Card = ({ item, index, darkTheme }) => {
           {/* Left Col: Date & Meta */}
           <div className="flex justify-between">
             <span
-              className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors ${
+              className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${
                 darkTheme
                   ? "text-white group-hover:text-[rgba(161,196,253,1)]"
                   : "text-[#212529] group-hover:text-[rgba(161,196,253,1)]"
@@ -94,7 +104,7 @@ const Card = ({ item, index, darkTheme }) => {
                 darkTheme ? "text-white/60" : "text-[#212529]/60"
               }`}
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4 hidden sm:block" />
               {item.period}
             </span>
           </div>
@@ -117,13 +127,15 @@ const Card = ({ item, index, darkTheme }) => {
                 <ChevronRight className="w-5 h-5" />
               </motion.span>
             </h3>
-            <p
-              className={`text-sm md:text-base leading-relaxed mb-4 ${
+            <ul
+              className={`text-xs md:text-sm leading-relaxed mb-4 space-y-3 list-disc list-inside ${
                 darkTheme ? "text-white/70" : "text-[#212529]/70"
               }`}
             >
-              {item.description}
-            </p>
+              {item.description.map((point, idx) => (
+                <li className="leading-[130%]" key={idx}>{point}</li>
+              ))}
+            </ul>
 
             {/* Micro-interaction: Staggered Tags */}
             <div className="flex flex-wrap gap-2">
@@ -173,32 +185,7 @@ export default function ExperienceSection() {
     >
       <div className="max-w-4xl mx-auto relative " ref={containerRef}>
         {/* Header */}
-        <div className="mb-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={`inline-flex items-center justify-center p-2 rounded-full border mb-4 transition-all duration-500 ${
-              darkTheme
-                ? "bg-[#212529] border-white/20"
-                : "bg-whitesmoke border-[#212529]/20"
-            }`}
-          >
-            <Briefcase
-              className={`w-4 h-4 mr-2 ${
-                darkTheme
-                  ? "text-[rgba(161,196,253,1)]"
-                  : "text-[rgba(161,196,253,1)]"
-              }`}
-            />
-            <span
-              className={`text-xs font-medium uppercase tracking-wider ${
-                darkTheme ? "text-white/80" : "text-[#212529]/80"
-              }`}
-            >
-              Career History
-            </span>
-          </motion.div>
+        <div className="mb-8 md:mb-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
