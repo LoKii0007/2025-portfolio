@@ -48,14 +48,7 @@ const ProjectCard = ({
                 <div className={`text-white text-2xl font-bold`}>
                   {data.name}
                 </div>
-                <div className={`text-white/80 text-sm`}>
-                  {data.points.map((point, index) => (
-                    <div key={index} className={`text-white/80 text-sm`}>
-                      {point}
-                    </div>
-                  ))}
-                </div>
-                <div className={`text-white/80 text-sm space-y-1`}>
+                <div className={`text-white/80 text-sm space-y-2`}>
                   {data.points.map((point, i) => (
                     <div
                       key={i}

@@ -35,6 +35,17 @@ export const projectsList = [
     ],
   },
   {
+    name: "PixelflowUI",
+    link: "https://pixelflowui.com/",
+    mobileImage: "images/pixelflowui-600.png",
+    desktopImage: "images/pixelflowui.png",
+    points: [
+      "A collection of responsive animated UI components for web applications.",
+      "Open source project.",
+      "Tech - Tailwind CSS, shadcn/ui, Motion, GSAP, Next.js, JavaScript",
+    ],
+  },
+  {
     name: "Gainz Journal",
     link: "https://gainz-journal.vercel.app",
     mobileImage: "images/gainz-600.png",
@@ -71,8 +82,8 @@ export const projectsList = [
   //   ],
   // },
   {
-    name: "Xr Central",
-    link: "https://login-auth-54c3e.web.app/",
+    name: "TriviArena",
+    link: "https://triviarena.maoverse.xyz/",
     mobileImage: "images/xrc-600.jpg",
     desktopImage: "images/xrc.png",
     points: [
