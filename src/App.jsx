@@ -18,6 +18,15 @@ function App() {
   // ------------------------------------
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://silentpulse.vercel.app/script.js";
+    script.defer = true;
+    script.setAttribute(
+      "data-website-id",
+      import.meta.env.VITE_UMAMI_WEBSITE_ID
+    );
+    document.body.appendChild(script);
+
     const lenis = new Lenis();
 
     lenis.on("scroll", (e) => {});

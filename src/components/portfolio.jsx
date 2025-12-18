@@ -34,8 +34,10 @@ const Portfolio = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (count % 2 === 0) {
+      if (count % 3 === 0) {
         setTitle("Frontend");
+      } else if (count % 3 === 1) {
+        setTitle("Full Stack");
       } else {
         setTitle("Design");
       }
