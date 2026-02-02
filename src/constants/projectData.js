@@ -12,14 +12,15 @@ export const projectsList = [
     ],
   },
   {
-    name: "Propped Up",
-    link: "https://propped-up-testing.vercel.app/",
-    mobileImage: "images/propped-600.png",
-    desktopImage: "images/propped.png",
+    name: "Prompt board",
+    link: "https://promptboard-seven.vercel.app/",
+    mobileImage: "images/promptboard-600.png",
+    desktopImage: "images/promptboard.png",
     points: [
-      "A platform for ordering signboards with seamless online transactions.",
-      "Admin Panel: Manage orders, track payments, and update order status.",
-      "Tech - React.js, Express.js, MongoDB, Node.js, Stripe, Tailwind CSS, Google Auth, Google Sheets API",
+      "Discover and use community-shared prompts to generate AI images",
+      "Generate images and organize prompts with folders",
+      "Flexible credit-based subscriptions with transparent pricing",
+      "Tech - Next.js, Express.js, PostgreSQL, Node.js, razorpay, Tailwind CSS, Google Auth, Prisma",
     ],
   },
   {
