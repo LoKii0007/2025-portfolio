@@ -9,7 +9,7 @@ const experiences = [
     id: 1,
     role: "Interactive Full Stack Developer",
     company: "Marqueascendia",
-    period: "Sep 2024 - Jul 2025",
+    period: "Sep 2024 - Dec 2025",
     description: [
       "Designed and built full-stack SaaS products and internal dashboards for Marqueascendia",
       "Worked on admin panels, payment flows, invoice generation systems, and role-based dashboards",
