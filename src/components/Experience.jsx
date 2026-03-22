@@ -29,9 +29,28 @@ const experiences = [
       "Stripe",
     ],
   },
-
   {
     id: 2,
+    role: "Software Development Engineer 1",
+    company: "Quanto Consulting",
+    period: "Jun 2025 - Sep 2025",
+    description: [
+      "Developed scalable backend services using Node.js and Express, handling API requests, business logic, and database interactions",
+      "Optimized PostgreSQL queries and database schemas, improving data retrieval performance and reducing API response times",
+      "Integrated third-party services and internal APIs to support core application features and improve system interoperability",
+      "Participated in code reviews, debugging, and production issue resolution, ensuring code quality and system reliability",
+    ],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Backend Development",
+      "System Design",
+    ],
+  },
+  {
+    id: 3,
     role: "Freelance Web Developer",
     company: "Self-Employed",
     period: "2023 - Present",
@@ -41,7 +60,7 @@ const experiences = [
       "Emphasized clean UI, smooth animations, and meaningful micro-interactions",
       "Translated ideas and brand stories into interactive web experiences",
       "Delivered polished, production-ready sites with ongoing improvements and refinements",
-    ],    
+    ],
     skills: [
       "React",
       "Next.js",
@@ -62,27 +81,24 @@ const Card = ({ item, index, darkTheme }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`relative rounded-2xl font-mono ${
-        darkTheme
+      className={`relative rounded-2xl font-mono ${darkTheme
           ? "dark-theme-bg dark-theme-shadow"
           : "light-theme-bg light-theme-shadow"
-      }`}
+        }`}
     >
       <div
-        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${
-          darkTheme
+        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${darkTheme
             ? " bg-[#212529]/80 hover:bg-[#212529]"
             : " bg-whitesmoke/80 hover:bg-whitesmoke"
-        }`}
+          }`}
       >
         {/* Hover Glow Effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
           <div
-            className={`absolute -inset-[1px] bg-gradient-to-r blur-sm rounded-2xl ${
-              darkTheme
+            className={`absolute -inset-[1px] bg-gradient-to-r blur-sm rounded-2xl ${darkTheme
                 ? "from-[rgba(161,196,253,0.2)] to-[rgba(194,233,251,0.2)]"
                 : "from-[rgba(161,196,253,0.3)] to-[rgba(194,233,251,0.3)]"
-            }`}
+              }`}
           />
         </div>
 
@@ -91,18 +107,16 @@ const Card = ({ item, index, darkTheme }) => {
           {/* Left Col: Date & Meta */}
           <div className="flex justify-between">
             <span
-              className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${
-                darkTheme
+              className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${darkTheme
                   ? "text-white group-hover:text-[rgba(161,196,253,1)]"
                   : "text-[#212529] group-hover:text-[rgba(161,196,253,1)]"
-              }`}
+                }`}
             >
               {item.company}
             </span>
             <span
-              className={`text-[10px] md:text-sm font-medium flex items-center gap-2 ${
-                darkTheme ? "text-white/60" : "text-[#212529]/60"
-              }`}
+              className={`text-[10px] md:text-sm font-medium flex items-center gap-2 ${darkTheme ? "text-white/60" : "text-[#212529]/60"
+                }`}
             >
               <Calendar className="w-4 h-4 hidden sm:block" />
               {item.period}
@@ -112,25 +126,22 @@ const Card = ({ item, index, darkTheme }) => {
           {/* Right Col: Role & Details */}
           <div>
             <h3
-              className={`text-lg md:text-xl font-semibold mb-2 flex items-center gap-2 ${
-                darkTheme ? "text-white/90" : "text-[#212529]/90"
-              }`}
+              className={`text-lg md:text-xl font-semibold mb-2 flex items-center gap-2 ${darkTheme ? "text-white/90" : "text-[#212529]/90"
+                }`}
             >
               {item.role}
               <motion.span
-                className={`opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${
-                  darkTheme
+                className={`opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${darkTheme
                     ? "text-[rgba(161,196,253,1)]"
                     : "text-[rgba(161,196,253,1)]"
-                }`}
+                  }`}
               >
                 <ChevronRight className="w-5 h-5" />
               </motion.span>
             </h3>
             <ul
-              className={`text-xs md:text-sm leading-relaxed mb-4 space-y-3 list-disc list-inside ${
-                darkTheme ? "text-white/70" : "text-[#212529]/70"
-              }`}
+              className={`text-xs md:text-sm leading-relaxed mb-4 space-y-3 list-disc list-inside ${darkTheme ? "text-white/70" : "text-[#212529]/70"
+                }`}
             >
               {item.description.map((point, idx) => (
                 <li className="leading-[130%]" key={idx}>{point}</li>
@@ -142,11 +153,10 @@ const Card = ({ item, index, darkTheme }) => {
               {item.skills.map((skill, i) => (
                 <motion.span
                   key={skill}
-                  className={`text-xs font-medium px-2.5 py-1 rounded-full border transition-colors ${
-                    darkTheme
+                  className={`text-xs font-medium px-2.5 py-1 rounded-full border transition-colors ${darkTheme
                       ? "bg-[#212529]/50 text-white/80 border-white/20"
                       : "bg-white/50 text-[#212529]/80 border-[#212529]/20"
-                  }`}
+                    }`}
                   whileHover={{
                     scale: 1.05,
                     borderColor: darkTheme
@@ -179,9 +189,8 @@ export default function ExperienceSection() {
 
   return (
     <section
-      className={`min-h-screen p-4 sm:p-6 relative overflow-hidden transition-all duration-300 ease-in-out ${
-        darkTheme ? "dark-theme-bg" : "light-theme-bg"
-      }`}
+      className={`min-h-screen p-4 sm:p-6 relative overflow-hidden transition-all duration-300 ease-in-out ${darkTheme ? "dark-theme-bg" : "light-theme-bg"
+        }`}
     >
       <div className="max-w-4xl mx-auto relative " ref={containerRef}>
         {/* Header */}
@@ -190,9 +199,8 @@ export default function ExperienceSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className={`text-4xl md:text-5xl font-bold tracking-tight transition-colors duration-500 ${
-              darkTheme ? "text-white" : "text-[#212529] "
-            }`}
+            className={`text-4xl md:text-5xl font-bold tracking-tight transition-colors duration-500 ${darkTheme ? "text-white" : "text-[#212529] "
+              }`}
           >
             Experience
           </motion.h2>
@@ -200,17 +208,15 @@ export default function ExperienceSection() {
 
         {/* Timeline Line (Desktop Only) */}
         <div
-          className={`absolute left-[24px] md:left-1/2 top-30 bottom-24 w-px -translate-x-1/2 hidden md:block transition-colors duration-500 ${
-            darkTheme ? "bg-white/20" : "bg-[#212529]/20"
-          }`}
+          className={`absolute left-[24px] md:left-1/2 top-30 bottom-24 w-px -translate-x-1/2 hidden md:block transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
+            }`}
         >
           <motion.div
             style={{ height }}
-            className={`w-full bg-gradient-to-b to-transparent shadow-lg transition-all duration-500 ${
-              darkTheme
+            className={`w-full bg-gradient-to-b to-transparent shadow-lg transition-all duration-500 ${darkTheme
                 ? "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.5)]"
                 : "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.3)]"
-            }`}
+              }`}
           />
         </div>
 
@@ -219,24 +225,21 @@ export default function ExperienceSection() {
           {experiences.map((item, index) => (
             <div
               key={item.id}
-              className={`md:flex ${
-                index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-              } relative`}
+              className={`md:flex ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                } relative`}
             >
               {/* Center Dot for Desktop */}
               <div
-                className={`hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${
-                  darkTheme
+                className={`hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
                     ? "bg-[#212529] border-white/30"
                     : "bg-whitesmoke border-[#212529]/30"
-                }`}
+                  }`}
               >
                 <div
-                  className={`w-2 h-2 rounded-full animate-pulse ${
-                    darkTheme
+                  className={`w-2 h-2 rounded-full animate-pulse ${darkTheme
                       ? "bg-[rgba(161,196,253,1)]"
                       : "bg-[rgba(161,196,253,1)]"
-                  }`}
+                    }`}
                 />
               </div>
 
