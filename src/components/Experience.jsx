@@ -9,7 +9,7 @@ const experiences = [
     id: 1,
     role: "Interactive Full Stack Developer",
     company: "Marqueascendia",
-    period: "Sep 2024 - Dec 2025",
+    period: "Sep 2024 - Jun 2025",
     description: [
       "Designed and built full-stack SaaS products and internal dashboards for Marqueascendia",
       "Worked on admin panels, payment flows, invoice generation systems, and role-based dashboards",
@@ -82,22 +82,22 @@ const Card = ({ item, index, darkTheme }) => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className={`relative rounded-2xl font-mono ${darkTheme
-          ? "dark-theme-bg dark-theme-shadow"
-          : "light-theme-bg light-theme-shadow"
+        ? "dark-theme-bg dark-theme-shadow"
+        : "light-theme-bg light-theme-shadow"
         }`}
     >
       <div
         className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${darkTheme
-            ? " bg-[#212529]/80 hover:bg-[#212529]"
-            : " bg-whitesmoke/80 hover:bg-whitesmoke"
+          ? " bg-[#212529]/80 hover:bg-[#212529]"
+          : " bg-whitesmoke/80 hover:bg-whitesmoke"
           }`}
       >
         {/* Hover Glow Effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
           <div
             className={`absolute -inset-[1px] bg-gradient-to-r blur-sm rounded-2xl ${darkTheme
-                ? "from-[rgba(161,196,253,0.2)] to-[rgba(194,233,251,0.2)]"
-                : "from-[rgba(161,196,253,0.3)] to-[rgba(194,233,251,0.3)]"
+              ? "from-[rgba(161,196,253,0.2)] to-[rgba(194,233,251,0.2)]"
+              : "from-[rgba(161,196,253,0.3)] to-[rgba(194,233,251,0.3)]"
               }`}
           />
         </div>
@@ -108,8 +108,8 @@ const Card = ({ item, index, darkTheme }) => {
           <div className="flex justify-between">
             <span
               className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${darkTheme
-                  ? "text-white group-hover:text-[rgba(161,196,253,1)]"
-                  : "text-[#212529] group-hover:text-[rgba(161,196,253,1)]"
+                ? "text-white group-hover:text-[rgba(161,196,253,1)]"
+                : "text-[#212529] group-hover:text-[rgba(161,196,253,1)]"
                 }`}
             >
               {item.company}
@@ -132,8 +132,8 @@ const Card = ({ item, index, darkTheme }) => {
               {item.role}
               <motion.span
                 className={`opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${darkTheme
-                    ? "text-[rgba(161,196,253,1)]"
-                    : "text-[rgba(161,196,253,1)]"
+                  ? "text-[rgba(161,196,253,1)]"
+                  : "text-[rgba(161,196,253,1)]"
                   }`}
               >
                 <ChevronRight className="w-5 h-5" />
@@ -154,8 +154,8 @@ const Card = ({ item, index, darkTheme }) => {
                 <motion.span
                   key={skill}
                   className={`text-xs font-medium px-2.5 py-1 rounded-full border transition-colors ${darkTheme
-                      ? "bg-[#212529]/50 text-white/80 border-white/20"
-                      : "bg-white/50 text-[#212529]/80 border-[#212529]/20"
+                    ? "bg-[#212529]/50 text-white/80 border-white/20"
+                    : "bg-white/50 text-[#212529]/80 border-[#212529]/20"
                     }`}
                   whileHover={{
                     scale: 1.05,
@@ -214,8 +214,8 @@ export default function ExperienceSection() {
           <motion.div
             style={{ height }}
             className={`w-full bg-gradient-to-b to-transparent shadow-lg transition-all duration-500 ${darkTheme
-                ? "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.5)]"
-                : "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.3)]"
+              ? "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.5)]"
+              : "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.3)]"
               }`}
           />
         </div>
@@ -231,14 +231,14 @@ export default function ExperienceSection() {
               {/* Center Dot for Desktop */}
               <div
                 className={`hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
-                    ? "bg-[#212529] border-white/30"
-                    : "bg-whitesmoke border-[#212529]/30"
+                  ? "bg-[#212529] border-white/30"
+                  : "bg-whitesmoke border-[#212529]/30"
                   }`}
               >
                 <div
                   className={`w-2 h-2 rounded-full animate-pulse ${darkTheme
-                      ? "bg-[rgba(161,196,253,1)]"
-                      : "bg-[rgba(161,196,253,1)]"
+                    ? "bg-[rgba(161,196,253,1)]"
+                    : "bg-[rgba(161,196,253,1)]"
                     }`}
                 />
               </div>
