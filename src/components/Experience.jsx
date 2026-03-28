@@ -140,7 +140,7 @@ const Card = ({ item, index, darkTheme }) => {
             </ul>
 
             {/* Micro-interaction: Staggered Tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="hidden md:flex flex-wrap gap-2">
               {item.skills.map((skill, i) => (
                 <motion.span
                   key={skill}
@@ -198,7 +198,7 @@ export default function ExperienceSection() {
 
         {/* Timeline Line */}
         <div
-          className={`absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
+          className={` hidden md:absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
             }`}
         >
           <motion.div
@@ -215,11 +215,11 @@ export default function ExperienceSection() {
           {experiences.map((item, index) => (
             <div
               key={item.id}
-              className={`md:flex relative pl-12 md:pl-20`}
+              className={`md:flex relative md:pl-20`}
             >
               {/* Dot */}
               <div
-                className={`flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-8 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
+                className={`hidden md:flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-8 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
                   ? "bg-[#212529] border-white/30"
                   : "bg-whitesmoke border-[#212529]/30"
                   }`}
