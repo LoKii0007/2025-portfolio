@@ -6,6 +6,26 @@ import { GlobalContext } from "../context/globalContext";
 // --- Mock Data ---
 const experiences = [
   {
+    id: 2,
+    role: "Software Development Engineer 1",
+    company: "Quanto Consulting",
+    period: "Jun 2025 - Sep 2025",
+    description: [
+      "Developed scalable backend services using Node.js and Express, handling API requests, business logic, and database interactions",
+      "Optimized PostgreSQL queries and database schemas, improving data retrieval performance and reducing API response times",
+      "Integrated third-party services and internal APIs to support core application features and improve system interoperability",
+      "Participated in code reviews, debugging, and production issue resolution, ensuring code quality and system reliability",
+    ],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Backend Development",
+      "System Design",
+    ],
+  },
+  {
     id: 1,
     role: "Interactive Full Stack Developer",
     company: "Marqueascendia",
@@ -27,26 +47,6 @@ const experiences = [
       "Prisma",
       "Tailwind CSS",
       "Stripe",
-    ],
-  },
-  {
-    id: 2,
-    role: "Software Development Engineer 1",
-    company: "Quanto Consulting",
-    period: "Jun 2025 - Sep 2025",
-    description: [
-      "Developed scalable backend services using Node.js and Express, handling API requests, business logic, and database interactions",
-      "Optimized PostgreSQL queries and database schemas, improving data retrieval performance and reducing API response times",
-      "Integrated third-party services and internal APIs to support core application features and improve system interoperability",
-      "Participated in code reviews, debugging, and production issue resolution, ensuring code quality and system reliability",
-    ],
-    skills: [
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "REST APIs",
-      "Backend Development",
-      "System Design",
     ],
   },
   {
@@ -82,25 +82,16 @@ const Card = ({ item, index, darkTheme }) => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className={`relative rounded-2xl font-mono ${darkTheme
-        ? "dark-theme-bg dark-theme-shadow"
-        : "light-theme-bg light-theme-shadow"
+        ? "dark-theme-shadow"
+        : "light-theme-shadow"
         }`}
     >
       <div
         className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${darkTheme
-          ? " bg-[#212529]/80 hover:bg-[#212529]"
-          : " bg-whitesmoke/80 hover:bg-whitesmoke"
+          ? " bg-[#212529]/80"
+          : " bg-whitesmoke/80"
           }`}
       >
-        {/* Hover Glow Effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-          <div
-            className={`absolute -inset-px bg-linear-to-r blur-sm rounded-2xl ${darkTheme
-              ? "from-[rgba(var(--theme-color-rgb),0.2)] to-[rgba(var(--theme-color-rgb),0.2)]"
-              : "from-[rgba(var(--theme-color-rgb),0.3)] to-[rgba(var(--theme-color-rgb),0.3)]"
-              }`}
-          />
-        </div>
 
         {/* Content Container */}
         <div className="relative z-10 flex flex-col gap-2 md:gap-6 w-full">
@@ -158,7 +149,6 @@ const Card = ({ item, index, darkTheme }) => {
                     : "bg-white/50 text-[#212529]/80 border-[#212529]/20"
                     }`}
                   whileHover={{
-                    scale: 1.05,
                     borderColor: darkTheme
                       ? "rgba(var(--theme-color-rgb), 0.5)"
                       : "rgba(var(--theme-color-rgb), 0.5)",
@@ -214,8 +204,8 @@ export default function ExperienceSection() {
           <motion.div
             style={{ height }}
             className={`w-full bg-linear-to-b to-transparent shadow-lg transition-all duration-500 ${darkTheme
-              ? "from-[rgb(var(--theme-color-rgb))] via-[rgba(var(--theme-color-rgb),0.8)] shadow-[rgba(var(--theme-color-rgb),0.5)]"
-              : "from-[rgb(var(--theme-color-rgb))] via-[rgba(var(--theme-color-rgb),0.8)] shadow-[rgba(var(--theme-color-rgb),0.3)]"
+              ? "shadow-[rgba(var(--theme-color-rgb),0.5)]"
+              : "shadow-[rgba(var(--theme-color-rgb),0.3)]"
               }`}
           />
         </div>

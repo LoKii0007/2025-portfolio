@@ -85,7 +85,7 @@ const Portfolio = () => {
       >
         <section className="portfolio min-h-screen md:h-screen transition-all duration-500 ease-in-out w-full md:w-screen flex relative">
           <div className="portfolio-section w-full md:w-screen transition-all duration-500 ease-in-out flex flex-col-reverse gap-10 md:gap-0 md:flex-row justify-center md:justify-around items-center">
-            <div className=" flex flex-col w-full md:w-auto items-center md:items-start">
+            <div className="relative flex flex-col w-full md:w-auto items-center md:items-start">
               <motion.div
                 initial={isMobile ? {
                   opacity: 0,
@@ -162,7 +162,7 @@ const Portfolio = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="mt-8 flex flex-col gap-6 max-w-fit"
+                className="mt-8 flex flex-col gap-6 max-w-fit md:absolute top-full"
               >
                 {/* Buttons */}
                 <div className="flex gap-4 flex-col md:flex-row">
@@ -212,8 +212,8 @@ const Portfolio = () => {
                         to={link.link}
                         target="_blank"
                         className={`transition-transform hover:scale-110 ${darkTheme
-                          ? "text-gray-400 hover:text-white"
-                          : "text-gray-600 hover:text-black"
+                          ? "text-gray-400 hover:text-red-500"
+                          : "text-gray-600 hover:text-red-500"
                           }`}
                         aria-label={link.label}
                       >

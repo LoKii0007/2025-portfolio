@@ -142,7 +142,10 @@ const ContactForm = () => {
               <button
                 disabled={loading}
                 onClick={(e) => handleSubmit(e)}
-                className="common-btn-2"
+                className={`px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 ${darkTheme
+                  ? "light-theme-shadow light-theme-bg text-black"
+                  : "dark-theme-shadow dark-theme-bg text-white"
+                  }`}
               >
                 {loading ? "Sending ..." : "Submit"}
               </button>

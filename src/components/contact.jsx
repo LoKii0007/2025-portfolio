@@ -93,32 +93,28 @@ export default function Contact() {
     <>
       <div
         id="contact"
-        className={` ${
-          darkTheme ? "dark-theme-bg" : "light-theme-bg"
-        } contact justify-between items-center min-h-[500px] pb-20 md:pb-12 md:h-screen w-screen p-4 md:p-12 z-60 relative flex overflow-hidden font-mono`}
+        className={` ${darkTheme ? "dark-theme-bg" : "light-theme-bg"
+          } contact justify-between items-center min-h-[500px] pb-20 md:pb-12 md:h-screen w-screen p-4 md:p-12 z-60 relative flex overflow-hidden font-mono`}
       >
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 w-full h-full flex-1">
           <div
-            className={`${
-              darkTheme
+            className={`${darkTheme
                 ? "dark-theme-shadow dark-theme-bg"
                 : "light-theme-shadow light-theme-bg"
-            } rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
+              } rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
           >
             <div className="contact-top space-y-6">
               <div
-                className={`touch text-center md:text-left ${
-                  darkTheme ? "text-white" : "text-black"
-                }`}
+                className={`touch text-center md:text-left ${darkTheme ? "text-white" : "text-black"
+                  }`}
               >
                 Get in touch
               </div>
               <div
-                className={`${
-                  darkTheme ? "dark-theme-text" : "light-theme-text"
-                } chat text-2xl font-bold `}
+                className={`${darkTheme ? "dark-theme-text" : "light-theme-text"
+                  } chat text-2xl font-bold `}
               >
-                Let's Chat
+                Let's <span className="text-red-500">Chat</span>
               </div>
             </div>
 
@@ -131,9 +127,8 @@ export default function Contact() {
               }}
             ></div>
             <div
-              className={`${
-                darkTheme ? "dark-theme-text" : "light-theme-text"
-              } contact-bottom`}
+              className={`${darkTheme ? "dark-theme-text" : "light-theme-text"
+                } contact-bottom`}
             >
               <form type="submit" className="contact-form">
                 <div className=" flex flex-col gap-1 ">
@@ -144,11 +139,10 @@ export default function Contact() {
                     Name
                   </label>
                   <input
-                    className={`${
-                      darkTheme
+                    className={`${darkTheme
                         ? "bg-black/20 text-white focus:ring-black"
                         : "bg-white text-black/80 focus:outline-none"
-                    } p-1 rounded-md resize-none`}
+                      } p-1 rounded-md resize-none`}
                     type="text"
                     required
                     onChange={(e) => handleData(e)}
@@ -171,11 +165,10 @@ export default function Contact() {
                     onChange={(e) => handleData(e)}
                     value={formData.email}
                     name="email"
-                    className={`${
-                      darkTheme
+                    className={`${darkTheme
                         ? "bg-black/20 text-white focus:ring-black"
                         : "bg-white text-black/80 focus:outline-none"
-                    } p-1 rounded-md resize-none`}
+                      } p-1 rounded-md resize-none`}
                     id="email"
                     placeholder="someone@gmail.com"
                   />
@@ -194,11 +187,10 @@ export default function Contact() {
                     value={formData.message}
                     name="message"
                     placeholder="Leave a message"
-                    className={`${
-                      darkTheme
+                    className={`${darkTheme
                         ? "bg-black/20 text-white focus:ring-black"
                         : "bg-white text-black/80 focus:outline-none"
-                    } p-1 rounded-md `}
+                      } p-1 rounded-md `}
                     id="message"
                   />
                 </div>
@@ -207,9 +199,10 @@ export default function Contact() {
                   <button
                     disabled={loading}
                     onClick={(e) => handleSubmit(e)}
-                    className={`common-btn-2 ${
-                      darkTheme ? "text-white" : "text-black"
-                    }`}
+                    className={`px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 ${darkTheme
+                      ? "light-theme-shadow light-theme-bg text-black"
+                      : "dark-theme-shadow dark-theme-bg text-white"
+                      }`}
                   >
                     {loading ? "Sending ..." : "Submit"}
                   </button>
@@ -220,11 +213,10 @@ export default function Contact() {
 
           <div className="contact-right md:flex hidden rounded-[32px] flex-col col-span-6 w-full h-full space-y-12">
             <div
-              className={` ${
-                darkTheme
+              className={` ${darkTheme
                   ? "dark-theme-shadow dark-theme-bg"
                   : "light-theme-shadow light-theme-bg"
-              } contact-img rounded-[32px] flex justify-center items-center`}
+                } contact-img rounded-[32px] flex justify-center items-center`}
             >
               {/* <img src="/portfolio1.png" alt="" /> */}
               <div className="model min-h-[300px]">
@@ -237,11 +229,10 @@ export default function Contact() {
               </div>
             </div>
             <div
-              className={` ${
-                darkTheme
+              className={` ${darkTheme
                   ? "dark-theme-shadow dark-theme-bg"
                   : "light-theme-shadow light-theme-bg"
-              } contact-info rounded-[32px] flex flex-col justify-evenly items-center w-full gap-2 p-4`}
+                } contact-info rounded-[32px] flex flex-col justify-evenly items-center w-full gap-2 p-4`}
             >
               {contactInfo.map((item, index) => (
                 <div
@@ -253,9 +244,8 @@ export default function Contact() {
                       window.open(item.value, "_blank");
                     }
                   }}
-                  className={`rounded-[16px] py-3 flex w-full ${
-                    !darkTheme ? "bg-gray-200 text-black" : "bg-black/20 text-white"
-                  } items-center cursor-pointer`}
+                  className={`rounded-[16px] py-3 flex w-full ${!darkTheme ? "bg-gray-200 text-black" : "bg-black/20 text-white"
+                    } items-center cursor-pointer`}
                 >
                   <div className="icon px-4">{item.icon}</div>
                   <div className="info">
