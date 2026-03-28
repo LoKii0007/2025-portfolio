@@ -97,7 +97,7 @@ canvas {
 
 .common-btn {
   padding: 10px 48px !important;
-  color: rgb(73, 183, 223);
+  color: rgb(var(--theme-color-rgb));
   background-color: white;
   border-radius: 32px;
 }
@@ -109,13 +109,13 @@ canvas {
   border-radius: 32px;
   transition: .5s ease;
   border: none !important;
-  background-color: rgb(194, 233, 251, 0.5);
-  box-shadow: rgba(194, 233, 251, 0) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  background-color: rgba(var(--theme-color-rgb), 0.5);
+  box-shadow: rgba(var(--theme-color-rgb), 0) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .common-btn-2:hover {
   transition: 1s ease;
-  box-shadow: rgba(194, 233, 251, 1) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(var(--theme-color-rgb), 1) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .project-card::before {
@@ -144,7 +144,7 @@ canvas {
 }
 
 .project-button:hover {
-  box-shadow: rgba(118, 155, 215, 0.5) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(var(--theme-color-rgb), 0.5) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .project-1 {

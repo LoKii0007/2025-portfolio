@@ -77,7 +77,7 @@ const SkillBadge = ({ skill, darkTheme }) => (
         ? "rgba(33, 37, 41, 1)"
         : "rgba(255, 255, 255, 1)",
       boxShadow: darkTheme
-        ? "0px 8px 15px rgba(161, 196, 253, 0.2)"
+        ? "0px 8px 15px rgba(var(--theme-color-rgb), 0.2)"
         : "0px 8px 15px rgba(0, 0, 0, 0.1)",
     }}
     transition={{ duration: 0.2 }}

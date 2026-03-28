@@ -95,9 +95,9 @@ const Card = ({ item, index, darkTheme }) => {
         {/* Hover Glow Effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
           <div
-            className={`absolute -inset-[1px] bg-gradient-to-r blur-sm rounded-2xl ${darkTheme
-              ? "from-[rgba(161,196,253,0.2)] to-[rgba(194,233,251,0.2)]"
-              : "from-[rgba(161,196,253,0.3)] to-[rgba(194,233,251,0.3)]"
+            className={`absolute -inset-px bg-linear-to-r blur-sm rounded-2xl ${darkTheme
+              ? "from-[rgba(var(--theme-color-rgb),0.2)] to-[rgba(var(--theme-color-rgb),0.2)]"
+              : "from-[rgba(var(--theme-color-rgb),0.3)] to-[rgba(var(--theme-color-rgb),0.3)]"
               }`}
           />
         </div>
@@ -108,8 +108,8 @@ const Card = ({ item, index, darkTheme }) => {
           <div className="flex justify-between">
             <span
               className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${darkTheme
-                ? "text-white group-hover:text-[rgba(161,196,253,1)]"
-                : "text-[#212529] group-hover:text-[rgba(161,196,253,1)]"
+                ? "text-white group-hover:text-[rgb(var(--theme-color-rgb))]"
+                : "text-[#212529] group-hover:text-[rgb(var(--theme-color-rgb))]"
                 }`}
             >
               {item.company}
@@ -132,8 +132,8 @@ const Card = ({ item, index, darkTheme }) => {
               {item.role}
               <motion.span
                 className={`opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${darkTheme
-                  ? "text-[rgba(161,196,253,1)]"
-                  : "text-[rgba(161,196,253,1)]"
+                  ? "text-[rgb(var(--theme-color-rgb))]"
+                  : "text-[rgb(var(--theme-color-rgb))]"
                   }`}
               >
                 <ChevronRight className="w-5 h-5" />
@@ -160,8 +160,8 @@ const Card = ({ item, index, darkTheme }) => {
                   whileHover={{
                     scale: 1.05,
                     borderColor: darkTheme
-                      ? "rgba(161, 196, 253, 0.5)"
-                      : "rgba(161, 196, 253, 0.5)",
+                      ? "rgba(var(--theme-color-rgb), 0.5)"
+                      : "rgba(var(--theme-color-rgb), 0.5)",
                     color: darkTheme ? "#fff" : "#212529",
                   }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -194,7 +194,7 @@ export default function ExperienceSection() {
     >
       <div className="max-w-4xl mx-auto relative " ref={containerRef}>
         {/* Header */}
-        <div className="mb-8 md:mb-16 text-center">
+        <div className="mb-8 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -206,44 +206,43 @@ export default function ExperienceSection() {
           </motion.h2>
         </div>
 
-        {/* Timeline Line (Desktop Only) */}
+        {/* Timeline Line */}
         <div
-          className={`absolute left-[24px] md:left-1/2 top-30 bottom-24 w-px -translate-x-1/2 hidden md:block transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
+          className={`absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
             }`}
         >
           <motion.div
             style={{ height }}
-            className={`w-full bg-gradient-to-b to-transparent shadow-lg transition-all duration-500 ${darkTheme
-              ? "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.5)]"
-              : "from-[rgba(161,196,253,1)] via-[rgba(194,233,251,1)] shadow-[rgba(161,196,253,0.3)]"
+            className={`w-full bg-linear-to-b to-transparent shadow-lg transition-all duration-500 ${darkTheme
+              ? "from-[rgb(var(--theme-color-rgb))] via-[rgba(var(--theme-color-rgb),0.8)] shadow-[rgba(var(--theme-color-rgb),0.5)]"
+              : "from-[rgb(var(--theme-color-rgb))] via-[rgba(var(--theme-color-rgb),0.8)] shadow-[rgba(var(--theme-color-rgb),0.3)]"
               }`}
           />
         </div>
 
         {/* Experience List */}
-        <div className="space-y-4 md:space-y-12 relative z-10">
+        <div className="space-y-4 md:space-y-8 relative z-10">
           {experiences.map((item, index) => (
             <div
               key={item.id}
-              className={`md:flex ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-                } relative`}
+              className={`md:flex relative pl-12 md:pl-20`}
             >
-              {/* Center Dot for Desktop */}
+              {/* Dot */}
               <div
-                className={`hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
+                className={`flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-8 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
                   ? "bg-[#212529] border-white/30"
                   : "bg-whitesmoke border-[#212529]/30"
                   }`}
               >
                 <div
                   className={`w-2 h-2 rounded-full animate-pulse ${darkTheme
-                    ? "bg-[rgba(161,196,253,1)]"
-                    : "bg-[rgba(161,196,253,1)]"
+                    ? "bg-[rgb(var(--theme-color-rgb))]"
+                    : "bg-[rgb(var(--theme-color-rgb))]"
                     }`}
                 />
               </div>
 
-              <div className="w-full md:w-[45%]">
+              <div className="w-full">
                 <Card item={item} index={index} darkTheme={darkTheme} />
               </div>
             </div>

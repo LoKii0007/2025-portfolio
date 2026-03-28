@@ -3,6 +3,18 @@ body {
   /* width: 100vw; */
 }
 
+:root {
+  --color-design: #ff4d4f;
+  --color-frontend: #f7362b;
+  --color-fullstack: #e11d48;
+
+  --shadow-design: rgba(255, 77, 79, 0.4);
+  --shadow-frontend: rgba(247, 54, 43, 0.4);
+  --shadow-fullstack: rgba(225, 29, 72, 0.4);
+
+  --theme-color-rgb: 247, 54, 43;
+}
+
 /* ------------------------------------ */
 /* dark - theme  */
 /* ------------------------------------ */
@@ -87,7 +99,7 @@ body {
 }
 
 .light-theme-gradient::before {
-  background: linear-gradient(90deg, rgba(194, 233, 251, 1) 0%, rgba(161, 196, 253, 1) 44%, rgba(194, 233, 251, 1) 100%);
+  background: linear-gradient(90deg, var(--color-design) 0%, var(--color-frontend) 44%, var(--color-fullstack) 100%);
 }
 
 .light-theme-gradient:hover::before {
