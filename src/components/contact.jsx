@@ -94,18 +94,18 @@ export default function Contact() {
       <div
         id="contact"
         className={` ${darkTheme ? "dark-theme-bg" : "light-theme-bg"
-          } contact justify-between items-center min-h-[500px] pb-20 md:pb-12 md:h-screen w-screen p-4 md:p-12 z-60 relative flex overflow-hidden font-mono`}
+          } contact justify-between items-center min-h-[500px] pb-20 md:pb-12 w-screen p-4 md:p-12 z-60 relative flex overflow-hidden font-mono`}
       >
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 w-full h-full flex-1">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 gap-12 w-full h-full flex-1">
           <div
             className={`${darkTheme
-                ? "dark-theme-shadow dark-theme-bg"
-                : "light-theme-shadow light-theme-bg"
-              } rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
+              ? "dark-theme-shadow dark-theme-bg"
+              : "light-theme-shadow light-theme-bg"
+              } rounded-[16px] md:rounded-[32px] col-span-6 w-full h-full p-4 md:p-12`}
           >
             <div className="contact-top space-y-6">
               <div
-                className={`touch text-center md:text-left ${darkTheme ? "text-white" : "text-black"
+                className={`touch text-left ${darkTheme ? "text-white" : "text-black"
                   }`}
               >
                 Get in touch
@@ -114,7 +114,7 @@ export default function Contact() {
                 className={`${darkTheme ? "dark-theme-text" : "light-theme-text"
                   } chat text-2xl font-bold `}
               >
-                Let's <span className="text-red-500">Chat</span>
+                Let's <span className="text-(--color-design)">Chat</span>
               </div>
             </div>
 
@@ -140,8 +140,8 @@ export default function Contact() {
                   </label>
                   <input
                     className={`${darkTheme
-                        ? "bg-black/20 text-white focus:ring-black"
-                        : "bg-white text-black/80 focus:outline-none"
+                      ? "bg-black/20 text-white focus:ring-black"
+                      : "bg-white text-black/80 focus:outline-none"
                       } p-1 rounded-md resize-none`}
                     type="text"
                     required
@@ -166,8 +166,8 @@ export default function Contact() {
                     value={formData.email}
                     name="email"
                     className={`${darkTheme
-                        ? "bg-black/20 text-white focus:ring-black"
-                        : "bg-white text-black/80 focus:outline-none"
+                      ? "bg-black/20 text-white focus:ring-black"
+                      : "bg-white text-black/80 focus:outline-none"
                       } p-1 rounded-md resize-none`}
                     id="email"
                     placeholder="someone@gmail.com"
@@ -188,8 +188,8 @@ export default function Contact() {
                     name="message"
                     placeholder="Leave a message"
                     className={`${darkTheme
-                        ? "bg-black/20 text-white focus:ring-black"
-                        : "bg-white text-black/80 focus:outline-none"
+                      ? "bg-black/20 text-white focus:ring-black"
+                      : "bg-white text-black/80 focus:outline-none"
                       } p-1 rounded-md `}
                     id="message"
                   />
@@ -199,29 +199,28 @@ export default function Contact() {
                   <button
                     disabled={loading}
                     onClick={(e) => handleSubmit(e)}
-                    className={`px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 ${darkTheme
+                    className={`px-8 py-3 rounded-full font-semibold transition-all transform w-40 hover:scale-105 ${darkTheme
                       ? "light-theme-shadow light-theme-bg text-black"
                       : "dark-theme-shadow dark-theme-bg text-white"
                       }`}
                   >
-                    {loading ? "Sending ..." : "Submit"}
+                    {loading ? "Sending ..." : "Send"}
                   </button>
                 </div>
               </form>
             </div>
           </div>
 
-          <div className="contact-right md:flex hidden rounded-[32px] flex-col col-span-6 w-full h-full space-y-12">
+          {/* <div className="contact-right md:flex hidden rounded-[32px] flex-col col-span-6 w-full h-full space-y-12">
             <div
               className={` ${darkTheme
-                  ? "dark-theme-shadow dark-theme-bg"
-                  : "light-theme-shadow light-theme-bg"
+                ? "dark-theme-shadow dark-theme-bg"
+                : "light-theme-shadow light-theme-bg"
                 } contact-img rounded-[32px] flex justify-center items-center`}
             >
-              {/* <img src="/portfolio1.png" alt="" /> */}
+              
               <div className="model min-h-[300px]">
                 <Canvas camera={{ fov: 16, position: [10, 10, 10] }}>
-                  {/* <OrbitControls enableZoom={false} autoRotate={false} /> */}
                   <ambientLight intensity={1} />
                   <directionalLight position={[3, 2, 1]} />
                   <Keyboard isTyping={isTyping} />
@@ -230,8 +229,8 @@ export default function Contact() {
             </div>
             <div
               className={` ${darkTheme
-                  ? "dark-theme-shadow dark-theme-bg"
-                  : "light-theme-shadow light-theme-bg"
+                ? "dark-theme-shadow dark-theme-bg"
+                : "light-theme-shadow light-theme-bg"
                 } contact-info rounded-[32px] flex flex-col justify-evenly items-center w-full gap-2 p-4`}
             >
               {contactInfo.map((item, index) => (
@@ -255,7 +254,7 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

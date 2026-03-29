@@ -159,30 +159,28 @@ function Projectsv2() {
     <>
       <div
         id="projects"
-        className={` ${
-          darkTheme
-            ? "dark-theme-bg dark-theme-text"
-            : "light-theme-bg light-theme-text"
-        } projects overflow-hidden flex md:flex-col md:justify-center items-center z-50 relative`}
+        className={` ${darkTheme
+          ? "dark-theme-bg dark-theme-text"
+          : "light-theme-bg light-theme-text"
+          } projects overflow-hidden flex md:flex-col md:justify-center items-center z-50 relative`}
       >
         <div
           className={`work-project h-screen w-screen flex flex-col justify-center items-center shrink-0 z-10`}
         >
-          <div className="main flex">
-            <div className="main-left text-[6px] md:text-xs font-normal">
-              <div className="w-full text-end">SOME</div> <div>SELECTED</div>
+
+          <div className="relative w-fit h-fit text-center text-[50px] md:text-[130px] font-bold tracking-[5%] leading-[70%] px-[10px]">
+            <div className="absolute  leading-normal text-[6px] md:text-xs text-(--color-design) font-semibold right-[98%] top-[5%] flex flex-col items-end">
+              <span>SOME</span> <span>SELECTED</span>
             </div>
-            <div className="main-middle text-[50px] md:text-[130px] font-bold leading-[30px] md:leading-[95px] px-[10px]">
-              PROJECTS
+            PROJECTS
+            <div className="text-center absolute leading-normal text-[5px] md:text-xs font-normal px-3 top-[120%] left-1/2 -translate-x-1/2">
+              CUSTOMER PROJECTS , PERSONAL PROJECTS <br />
+              SOME RESEARCH AND PLAYGROUND.
             </div>
-            <div className="main-right text-[5px] md:text-xs font-normal">
+            <div className="absolute  leading-normal text-[5px] text-left md:text-xs text-(--color-design) font-semibold left-[98%] top-[5%]">
               WEB <br />
-              DEVOLOPMENT
+              DEVELOPMENT
             </div>
-          </div>
-          <div className="text-center main-bottom text-[5px] md:text-xs font-normal pt-3 md:py-10 px-3">
-            CUSTOMER PROJECTS , PERSONAL PROJECTS <br />
-            SOME RESEARCH AND PLAYGROUND.
           </div>
         </div>
 

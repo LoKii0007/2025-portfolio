@@ -1,5 +1,4 @@
 import Portfolio from "../components/portfolio";
-import Projects from "../components/projects";
 import TechStack from "../components/techstack";
 import Contact from "../components/contact";
 import "../css/home.css";

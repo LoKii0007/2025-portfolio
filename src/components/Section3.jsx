@@ -43,10 +43,10 @@ function Section3() {
             } word-text rotate-10 z-[100] flex flex-col justify-center items-center text-center`}
         >
           <div>
-            <span className="text-red-500">Build</span> clean.
+            <span className="text-(--color-design)">Build</span> clean.
           </div>
           <div>
-            Ship <span className="text-red-500">fast.</span>
+            Ship <span className="">fast.</span>
           </div>
         </div>
         <div
@@ -56,10 +56,10 @@ function Section3() {
             } outer-circle rounded-full border-2 border-white overflow-hidden w-[100vw] h-[100vw] md:w-[45vw] md:h-[45vw] z-[120] -rotate-10 flex flex-col justify-center items-center absolute text-center`}
         >
           <div className="">
-            <span className="text-red-500">Build</span> clean.
+            <span className="text-(--color-design)">Build</span> clean.
           </div>
           <div>
-            Ship <span className="text-red-500">fast.</span>
+            Ship <span className="">fast.</span>
           </div>
         </div>
         <div
@@ -69,10 +69,10 @@ function Section3() {
             } middle-circle rounded-full border-2 border-white overflow-hidden w-[60vw] h-[60vw] md:w-[30vw] md:h-[30vw] z-[140] rotate-10 flex flex-col justify-center items-center absolute text-center`}
         >
           <div className="">
-            <span className="text-red-500">Build</span> clean.
+            <span className="text-(--color-design)">Build</span> clean.
           </div>
           <div>
-            Ship <span className="text-red-500">fast.</span>
+            Ship <span className="">fast.</span>
           </div>
         </div>
         <div
@@ -82,10 +82,10 @@ function Section3() {
             } inner-circle rounded-full border-2 border-white overflow-hidden w-[30vw] h-[30vw] md:w-[15vw] md:h-[15vw] z-[150] -rotate-10 flex flex-col justify-center items-center absolute text-center`}
         >
           <div>
-            <span className="text-red-500">Build</span> clean.
+            <span className="text-(--color-design)">Build</span> clean.
           </div>
           <div>
-            Ship <span className="text-red-500">fast.</span>
+            Ship <span className="">fast.</span>
           </div>
         </div>
       </div>

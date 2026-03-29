@@ -81,16 +81,13 @@ const Card = ({ item, index, darkTheme }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`relative rounded-2xl font-mono ${darkTheme
-        ? "dark-theme-shadow"
-        : "light-theme-shadow"
+      className={`relative rounded-2xl shadow-lg font-mono ${darkTheme
+        ? "dark-theme-bg dark-theme-shadow"
+        : "light-theme-bg light-theme-shadow"
         }`}
     >
       <div
-        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden ${darkTheme
-          ? " bg-[#212529]/80"
-          : " bg-whitesmoke/80"
-          }`}
+        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden`}
       >
 
         {/* Content Container */}
@@ -131,7 +128,7 @@ const Card = ({ item, index, darkTheme }) => {
               </motion.span>
             </h3>
             <ul
-              className={`text-xs md:text-sm leading-relaxed mb-4 space-y-3 list-disc list-inside ${darkTheme ? "text-white/70" : "text-[#212529]/70"
+              className={`text-xs md:text-sm hidden md:flex md:flex-col leading-relaxed mb-4 space-y-3 list-disc list-inside ${darkTheme ? "text-white/70" : "text-[#212529]/70"
                 }`}
             >
               {item.description.map((point, idx) => (
@@ -179,7 +176,7 @@ export default function ExperienceSection() {
 
   return (
     <section
-      className={`min-h-screen p-4 sm:p-6 relative overflow-hidden transition-all duration-300 ease-in-out ${darkTheme ? "dark-theme-bg" : "light-theme-bg"
+      className={` p-4 sm:p-6 relative overflow-hidden transition-all duration-300 ease-in-out ${darkTheme ? "dark-theme-bg" : "light-theme-bg"
         }`}
     >
       <div className="max-w-4xl mx-auto relative " ref={containerRef}>
@@ -198,7 +195,7 @@ export default function ExperienceSection() {
 
         {/* Timeline Line */}
         <div
-          className={` hidden md:absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
+          className={` md:absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
             }`}
         >
           <motion.div
@@ -215,11 +212,11 @@ export default function ExperienceSection() {
           {experiences.map((item, index) => (
             <div
               key={item.id}
-              className={`md:flex relative md:pl-20`}
+              className={`md:flex relative md:pl-16`}
             >
               {/* Dot */}
               <div
-                className={`hidden md:flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-8 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
+                className={`hidden md:flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
                   ? "bg-[#212529] border-white/30"
                   : "bg-whitesmoke border-[#212529]/30"
                   }`}

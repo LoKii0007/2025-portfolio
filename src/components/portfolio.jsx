@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     icon: <X size={28} strokeWidth={1.5} />,
-    link: "https://www.x.com/pixelflowui/",
+    link: "https://www.x.com/lokidotdev/",
     label: "X",
   },
   {
@@ -212,8 +212,8 @@ const Portfolio = () => {
                         to={link.link}
                         target="_blank"
                         className={`transition-transform hover:scale-110 ${darkTheme
-                          ? "text-gray-400 hover:text-red-500"
-                          : "text-gray-600 hover:text-red-500"
+                          ? "text-gray-400 hover:text-(--color-design)"
+                          : "text-gray-600 hover:text-(--color-design)"
                           }`}
                         aria-label={link.label}
                       >
