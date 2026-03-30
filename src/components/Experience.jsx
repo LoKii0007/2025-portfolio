@@ -81,13 +81,13 @@ const Card = ({ item, index, darkTheme }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`relative rounded-2xl shadow-lg font-mono ${darkTheme
-        ? "dark-theme-bg dark-theme-shadow"
-        : "light-theme-bg light-theme-shadow"
+      className={`relative md:rounded-2xl md:shadow-lg font-mono ${darkTheme
+        ? "md:dark-theme-bg md:dark-theme-shadow"
+        : "md:light-theme-bg md:light-theme-shadow"
         }`}
     >
       <div
-        className={`md:flex items-start justify-between group relative p-4 md:p-6 rounded-2xl transition-colors duration-300 overflow-hidden`}
+        className={`md:flex items-start justify-between group relative md:p-6 md:rounded-2xl transition-colors duration-300 overflow-hidden`}
       >
 
         {/* Content Container */}
@@ -95,9 +95,9 @@ const Card = ({ item, index, darkTheme }) => {
           {/* Left Col: Date & Meta */}
           <div className="flex justify-between">
             <span
-              className={`text-lg md:text-2xl font-bold tracking-tight mb-1 transition-colors leading-[130%] ${darkTheme
-                ? "text-white group-hover:text-[rgb(var(--theme-color-rgb))]"
-                : "text-[#212529] group-hover:text-[rgb(var(--theme-color-rgb))]"
+              className={`text-base md:text-2xl font-bold tracking-tight mb-1 transition-colors underline leading-[130%] ${darkTheme
+                ? "text-white/70"
+                : "text-[#212529]/70"
                 }`}
             >
               {item.company}
@@ -115,7 +115,7 @@ const Card = ({ item, index, darkTheme }) => {
           <div>
             <h3
               className={`text-lg md:text-xl font-semibold mb-2 flex items-center gap-2 ${darkTheme ? "text-white/90" : "text-[#212529]/90"
-                }`}
+                } group-hover:text-[rgb(var(--theme-color-rgb))]`}
             >
               {item.role}
               <motion.span
@@ -195,7 +195,7 @@ export default function ExperienceSection() {
 
         {/* Timeline Line */}
         <div
-          className={` md:absolute left-[24px] md:left-[32px] top-30 bottom-24 w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
+          className={` absolute left-2 md:left-8 top-[84px] md:top-[148px] h-[calc(100%-84px)] md:h-[calc(100%-148px)] w-px -translate-x-1/2 transition-colors duration-500 ${darkTheme ? "bg-white/20" : "bg-[#212529]/20"
             }`}
         >
           <motion.div
@@ -212,17 +212,17 @@ export default function ExperienceSection() {
           {experiences.map((item, index) => (
             <div
               key={item.id}
-              className={`md:flex relative md:pl-16`}
+              className={`md:flex relative pl-6 md:pl-16`}
             >
               {/* Dot */}
               <div
-                className={`hidden md:flex absolute left-[24px] md:left-[32px] -translate-x-1/2 top-6 items-center justify-center w-8 h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
+                className={`flex absolute left-2 md:left-8 -translate-x-1/2 top-1 md:top-6 items-center justify-center w-4 h-4 md:w-8 md:h-8 rounded-full border z-20 shadow-xl transition-all duration-500 ${darkTheme
                   ? "bg-[#212529] border-white/30"
                   : "bg-whitesmoke border-[#212529]/30"
                   }`}
               >
                 <div
-                  className={`w-2 h-2 rounded-full animate-pulse ${darkTheme
+                  className={`w-1 h-1 md:w-2 md:h-2 rounded-full animate-pulse ${darkTheme
                     ? "bg-[rgb(var(--theme-color-rgb))]"
                     : "bg-[rgb(var(--theme-color-rgb))]"
                     }`}

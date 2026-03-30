@@ -195,16 +195,16 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="text-center submit-btn py-5">
+                <div className="flex w-full justify-center submit-btn py-5">
                   <button
                     disabled={loading}
                     onClick={(e) => handleSubmit(e)}
-                    className={`px-8 py-3 rounded-full font-semibold transition-all transform w-40 hover:scale-105 ${darkTheme
+                    className={`px-8 py-3 rounded-full font-semibold transition-all transform w-40 flex justify-center items-center hover:scale-105 ${darkTheme
                       ? "light-theme-shadow light-theme-bg text-black"
                       : "dark-theme-shadow dark-theme-bg text-white"
                       }`}
                   >
-                    {loading ? <Loader2Icon /> : "Send"}
+                    {loading ? < Loader2Icon className="animate-spin" /> : "Send"}
                   </button>
                 </div>
               </form>

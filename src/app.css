@@ -118,3 +118,84 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility dark-theme-bg {
+  background-color: #212529;
+}
+
+@utility dark-theme-bg-light {
+  background-color: #34383c;
+}
+
+@utility dark-theme-text {
+  color: whitesmoke;
+}
+
+@utility dark-theme-stroke {
+  -webkit-text-stroke: 1px white;
+  &::before {
+    color: white;
+  }
+}
+
+@utility dark-theme-border {
+  border: 3px solid whitesmoke;
+}
+
+@utility dark-theme-shadow {
+  box-shadow: rgba(255, 255, 255, 0.12) 0px -3px 0px 0px inset, rgb(0, 0, 0) 0px 0px 2px 0px inset, rgba(255, 255, 255, 0.15) 0px 0px 0px 2px inset, rgba(255, 255, 255, 0.05) 0px 4px 24px 0px inset, rgba(0, 0, 0, 0.12) 0px 3px 4px 0px;
+}
+
+@utility dark-theme-border-sm {
+  border: 1px solid whitesmoke;
+}
+
+@utility dark-theme-gradient {
+  &::before {
+    background: linear-gradient(90deg, #34383c 0%, #212529 44%, #34383c 100%);
+  }
+  &:hover::before {
+    box-shadow: rgba(255, 255, 255, 0.05) 0px -3px 0px 0px inset, rgb(0, 0, 0) 0px 0px 0px 2px inset, rgba(255, 255, 255, 0.06) 0px 4px 2px 0px inset, rgba(255, 255, 255, 0.04) 0px 0px 24px 4px inset, rgba(255, 255, 255, 0.12) 0px 1px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  }
+}
+
+@utility light-theme-bg {
+  background-color: whitesmoke;
+}
+
+@utility light-theme-bg-light {
+  background-color: white;
+}
+
+@utility light-theme-text {
+  color: #212529;
+}
+
+@utility light-theme-stroke {
+  -webkit-text-stroke: 1px #212529;
+  &::before {
+    color: #212529;
+  }
+}
+
+@utility light-theme-border {
+  border: 3px solid #212529;
+}
+
+@utility light-theme-shadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+@utility light-theme-border-sm {
+  border: 1px solid black;
+}
+
+@utility light-theme-gradient {
+  &::before {
+    background: linear-gradient(90deg, var(--color-design) 0%, var(--color-frontend) 44%, var(--color-fullstack) 100%);
+  }
+  &:hover::before {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  }
+}
