@@ -4,7 +4,7 @@ import { Keyboard } from "../models/Keyboard";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { GlobalContext } from "../context/globalContext";
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Mail, Loader2Icon } from "lucide-react";
 
 const contactInfo = [
   {
@@ -73,7 +73,7 @@ export default function Contact() {
         return;
       }
       await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/api/first`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/message`,
         formData
       );
       toast.success("message sent successfully");
@@ -204,7 +204,7 @@ export default function Contact() {
                       : "dark-theme-shadow dark-theme-bg text-white"
                       }`}
                   >
-                    {loading ? "Sending ..." : "Send"}
+                    {loading ? <Loader2Icon /> : "Send"}
                   </button>
                 </div>
               </form>
