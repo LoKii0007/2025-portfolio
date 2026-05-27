@@ -1,0 +1,65 @@
+"use client";
+
+import { useEffect, type ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
+import { GlobalContextProvider } from "@/context/globalContext";
+import Navbar from "@/components/navbar";
+
+export function Providers({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let lenis: any = null;
+    let ticker: ((time: number) => void) | null = null;
+    let scrollTriggerUpdate: (() => void) | undefined;
+
+    const init = async () => {
+      const [{ default: Lenis }, gsap, { ScrollTrigger }] = await Promise.all([
+        import("@studio-freight/lenis"),
+        import("gsap"),
+        import("gsap/ScrollTrigger"),
+      ]);
+
+      gsap.default.registerPlugin(ScrollTrigger);
+
+      const umamiId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
+      if (umamiId) {
+        const script = document.createElement("script");
+        script.src = "https://silentpulse.vercel.app/script.js";
+        script.defer = true;
+        script.setAttribute("data-website-id", umamiId);
+        document.body.appendChild(script);
+      }
+
+      lenis = new Lenis();
+      scrollTriggerUpdate = () => ScrollTrigger.update();
+      lenis.on("scroll", scrollTriggerUpdate);
+
+      ticker = (time: number) => {
+        lenis?.raf(time * 1000);
+      };
+
+      gsap.default.ticker.add(ticker);
+      gsap.default.ticker.lagSmoothing(0);
+    };
+
+    void init();
+
+    return () => {
+      void import("gsap").then((gsap) => {
+        if (ticker) gsap.default.ticker.remove(ticker);
+      });
+      if (lenis && scrollTriggerUpdate) {
+        lenis.off("scroll", scrollTriggerUpdate);
+        lenis.destroy();
+      }
+    };
+  }, []);
+
+  return (
+    <GlobalContextProvider>
+      <Navbar />
+      {children}
+      <Toaster />
+    </GlobalContextProvider>
+  );
+}

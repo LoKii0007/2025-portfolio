@@ -1,0 +1,98 @@
+import type { Project } from "@/types/project";
+
+export const projectsList: Project[] = [
+  {
+    name: "FOTF",
+    link: "https://fotf-frontend.vercel.app",
+    mobileImage: "images/fotf-600.jpg",
+    desktopImage: "images/fotf.png",
+    points: [
+      "Developed a fully responsive animated website with smooth transitions and micro-interactions.",
+      "Implemented optimized animations using GSAP for a seamless user experience.",
+      "Ensured cross-browser compatibility and mobile-friendly design.",
+      "Tech - React.js, GSAP, Bootstrap, HTML, CSS",
+    ],
+  },
+  {
+    name: "Prompt board",
+    link: "https://promptboard.zero1studio.xyz/",
+    mobileImage: "images/promptboard-600.png",
+    desktopImage: "images/promptboard.png",
+    points: [
+      "Discover and share AI prompts with vector search, Redis caching, and database replicas for performance",
+      "AI-powered image regeneration from prompts using generative AI",
+      "Flexible credit-based subscriptions with Razorpay and transparent pricing",
+      "Tech - Next.js, PostgreSQL, Express.js, JavaScript, Tailwind CSS, ShadCN UI, Razorpay, REST APIs, Resend, OpenAI, Redis, Prisma",
+    ],
+  },
+  {
+    name: "ChessBlitz",
+    link: "https://chessblitz.lok1.dev/",
+    mobileImage: "images/chess-600.jpg",
+    desktopImage: "images/chess.png",
+    points: [
+      "Real-time multiplayer chess with random matchmaking, friend games, and live spectating",
+      "Async, event-driven backend with WebSockets and Redis for concurrent gameplay",
+      "Tech - React.js, Express.js, Node.js, TypeScript, Tailwind CSS, WebSockets, Redis, PostgreSQL, Prisma",
+    ],
+  },
+  {
+    name: "TriviArena",
+    link: "https://triviarena.maoverse.xyz/",
+    mobileImage: "images/xrc-600.jpg",
+    desktopImage: "images/xrc.png",
+    points: [
+      "A real-time quiz application with interactive questions and live score updates.",
+      "Used Firebase for authentication and real-time database functionality.",
+      "Integrated WebSockets for live multiplayer quiz sessions.",
+      "Tech - React.js, Express.js, MongoDB, Node.js, Firebase, Socket.io, Tailwind CSS",
+    ],
+  },
+  {
+    name: "Galaxy Generator",
+    link: "https://galaxy-generator-eta.vercel.app/",
+    mobileImage: "images/galaxy.png",
+    desktopImage: "images/galaxy.png",
+    points: [
+      "A dynamic 3D galaxy generator built with Three.js using millions of particles.",
+      "Customizable parameters — adjust galaxy radius, spin, branches, and color gradients in real time.",
+      "Interactive camera controls and GPU-optimized rendering for smooth animations and exploration.",
+      "Tech - Three.js, React.js, Vite",
+    ],
+  },
+  {
+    name: "PixelflowUI",
+    link: "https://pixelflowui.lok1.dev/",
+    mobileImage: "images/pixelflowui-600.png",
+    desktopImage: "images/pixelflowui.png",
+    points: [
+      "A collection of responsive animated UI components for web applications.",
+      "Open source project.",
+      "Tech - Next.js, Framer Motion, GSAP, ShadCN UI, JavaScript, Tailwind CSS",
+    ],
+  },
+  // {
+  //   name: "Gainz Journal",
+  //   link: "https://gainz-journal.vercel.app",
+  //   mobileImage: "images/gainz-600.png",
+  //   desktopImage: "images/gainz.png",
+  //   points: [
+  //     "A journal app for tracking workouts and progress.",
+  //     // "CQRS style architecture.",
+  //     "Designed a clean and intuitive UI for better user experience.",
+  //     "Tech - React.js, Express.js, MongoDB, Node.js, Google OAuth, Tailwind CSS, shadcn/ui, zod, redux",
+  //   ],
+  // },
+  // {
+  //   name: "Captionizer",
+  //   link: "https://captionizer-star.vercel.app/",
+  //   mobileImage: "images/captionizer-600.png",
+  //   desktopImage: "images/image.png",
+  //   points: [
+  //     "caption generator for images with real-time text recognition.",
+  //     "Utilized Machine Learning APIs to generate contextually relevant captions.",
+  //     "Designed an intuitive interface for uploading and processing images efficiently.",
+  //     "Tech - Next.js, MongoDB, tailwind css, AWS s3 bucket",
+  //   ],
+  // },
+];

@@ -5,18 +5,15 @@ button:hover {
 
 ::-webkit-scrollbar {
   width: 0vh;
-  /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(136, 136, 136);
-  /* Set the color of the thumb */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
-  /* Set the color of the track */
 }
 
 .cursor {
@@ -53,14 +50,13 @@ canvas {
   min-width: 250px;
 }
 
-
 .custom-navbar {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset,
+    rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
-
 @keyframes hover {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -72,7 +68,6 @@ canvas {
 }
 
 @keyframes hover-horizontal {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -84,7 +79,6 @@ canvas {
 }
 
 @keyframes scale {
-
   0%,
   100% {
     height: 150px;
@@ -104,22 +98,25 @@ canvas {
 
 .common-btn-2 {
   padding: 10px 48px !important;
-  color: white;
   color: black;
   border-radius: 32px;
-  transition: .5s ease;
+  transition: 0.5s ease;
   border: none !important;
   background-color: rgba(var(--theme-color-rgb), 0.5);
-  box-shadow: rgba(var(--theme-color-rgb), 0) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(var(--theme-color-rgb), 0) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset,
+    rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .common-btn-2:hover {
   transition: 1s ease;
-  box-shadow: rgba(var(--theme-color-rgb), 1) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(var(--theme-color-rgb), 1) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset,
+    rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -140,11 +137,15 @@ canvas {
 }
 
 .project-button {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset,
+    rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .project-button:hover {
-  box-shadow: rgba(var(--theme-color-rgb), 0.5) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  box-shadow: rgba(var(--theme-color-rgb), 0.5) 0px -32px 32px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset,
+    rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 
 .project-1 {
@@ -170,7 +171,6 @@ canvas {
 .button-left {
   text-decoration: none !important;
 }
-
 
 @media screen and (max-width: 800px) {
   .cursor {
