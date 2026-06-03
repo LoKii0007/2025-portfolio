@@ -167,7 +167,7 @@ function Projectsv2() {
           } projects overflow-hidden flex md:flex-col md:justify-center items-center z-50 relative`}
       >
         <div
-          className={`work-project h-screen w-screen flex flex-col justify-center items-center shrink-0 z-10`}
+          className={`work-project h-dvh w-screen flex flex-col justify-center items-center shrink-0 z-10`}
         >
 
           <div className="relative w-fit h-fit text-center text-[50px] md:text-[130px] font-bold tracking-[5%] leading-[70%] px-[10px]">
