@@ -90,7 +90,7 @@ const Navbar = () => {
         y: 0,
       },
     }),
-    [isMobile]
+    [isMobile],
   );
 
   const mobileItemsVariants = {
@@ -114,8 +114,9 @@ const Navbar = () => {
   /* ---------------------------------- */
   return (
     <nav
-      className={`fixed z-200 w-screen flex justify-center ${isMobile ? "bottom-4" : "top-4"
-        }`}
+      className={`fixed z-200 w-screen flex justify-center ${
+        isMobile ? "bottom-4" : "top-4"
+      }`}
     >
       <motion.div
         variants={navbarVariants}
@@ -134,10 +135,11 @@ const Navbar = () => {
             width: isMobile ? "92vw" : "80vw",
           }}
           transition={{ duration: 0.45, ease: "easeInOut" }}
-          className={`overflow-hidden rounded-full shadow-lg flex flex-col ${darkTheme
-            ? "dark-theme-bg dark-theme-shadow"
-            : "light-theme-bg light-theme-shadow"
-            }`}
+          className={`overflow-hidden ${isMobile ? (expanded ? "rounded-2xl" : "rounded-full") : "rounded-2xl"} shadow-lg flex flex-col ${
+            darkTheme
+              ? "dark-theme-bg dark-theme-shadow"
+              : "light-theme-bg light-theme-shadow"
+          }`}
         >
           {/* ---------------- Mobile ---------------- */}
           {isMobile ? (
@@ -150,16 +152,19 @@ const Navbar = () => {
                   className="flex flex-col gap-1.5"
                 >
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "rotate-45 translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "rotate-45 translate-y-2" : ""}`}
                   />
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "opacity-0" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "opacity-0" : ""}`}
                   />
                   <span
-                    className={`w-6 h-0.5 transition ${darkTheme ? "bg-white" : "bg-black"
-                      } ${expanded ? "-rotate-45 -translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 transition ${
+                      darkTheme ? "bg-white" : "bg-black"
+                    } ${expanded ? "-rotate-45 -translate-y-2" : ""}`}
                   />
                 </button>
 
@@ -169,8 +174,9 @@ const Navbar = () => {
                   className="h-6 overflow-hidden"
                 >
                   <div
-                    className={`flex flex-col transition-transform duration-300 ${darkTheme ? "-translate-y-6" : "translate-y-0"
-                      }`}
+                    className={`flex flex-col transition-transform duration-300 ${
+                      darkTheme ? "-translate-y-6" : "translate-y-0"
+                    }`}
                   >
                     <Sun size={24} />
                     <Moon size={24} className="text-white" />
@@ -196,13 +202,17 @@ const Navbar = () => {
                         animate="visible"
                         exit="exit"
                         onClick={() => {
-                          if (item.href) { router.push(item.href); setExpanded(false); }
-                          else if (item.view) setHandleView(item.view);
+                          if (item.href) {
+                            router.push(item.href);
+                            setExpanded(false);
+                          } else if (item.view) setHandleView(item.view);
                         }}
                         className={`text-lg font-medium cursor-pointer ${
                           item.href && pathname === item.href
                             ? "text-(--color-design)"
-                            : darkTheme ? "text-white" : "text-black"
+                            : darkTheme
+                              ? "text-white"
+                              : "text-black"
                         }`}
                       >
                         {item.label}
@@ -220,8 +230,9 @@ const Navbar = () => {
                 className="h-6 overflow-hidden"
               >
                 <div
-                  className={`flex flex-col transition-transform duration-300 ${darkTheme ? "-translate-y-6" : "translate-y-0"
-                    }`}
+                  className={`flex flex-col transition-transform duration-300 ${
+                    darkTheme ? "-translate-y-6" : "translate-y-0"
+                  }`}
                 >
                   <Sun size={24} />
                   <Moon size={24} className="text-white" />
@@ -239,8 +250,10 @@ const Navbar = () => {
                     className={`cursor-pointer px-3 py-1 rounded-full transition relative group ${
                       item.href && pathname === item.href
                         ? "text-(--color-design)"
-                        : darkTheme ? "text-white" : "text-black"
-                      } hover:text-(--color-design)`}
+                        : darkTheme
+                          ? "text-white"
+                          : "text-black"
+                    } hover:text-(--color-design)`}
                   >
                     {item.label}
                     {/* {item.href && pathname === item.href && (
