@@ -10,7 +10,7 @@ import useWindow from "../hooks/useWindow";
 const socialLinks = [
   {
     icon: <Github size={28} strokeWidth={1.5} />,
-    link: "https://github.com/LoKii0007",
+    link: "https://github.com/lokidotdev",
     label: "Github",
   },
   {

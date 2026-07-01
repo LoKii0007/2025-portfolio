@@ -27,8 +27,9 @@ export const siteConfig = {
     "lok1.dev",
   ],
   author: "Lokesh Yadav",
-  github: "https://github.com/LoKii0007",
+  github: "https://github.com/lokidotdev",
   linkedin: "https://linkedin.com/in/yadav-lokesh/",
+  twitter: "https://x.com/lokidotdev",
 } as const;
 
 export const jsonLd = {
@@ -36,16 +37,19 @@ export const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
       name: siteConfig.name,
-      alternateName: siteConfig.alternateName,
+      alternateName: [siteConfig.alternateName, "Lokesh", "Loki Dev"],
       jobTitle: "Full Stack Engineer",
+      nationality: "Indian",
+      knowsLanguage: ["en", "hi"],
       description:
         "Frontend-focused Full Stack Engineer experienced in production-ready, real-time, and performance-sensitive web applications with React, Next.js, TypeScript, and Node.js.",
       url: `${siteConfig.url}/`,
       email: siteConfig.email,
       telephone: siteConfig.phone,
       image: `${siteConfig.url}/images/portfolio-sq.png`,
-      sameAs: [siteConfig.github, siteConfig.linkedin],
+      sameAs: [siteConfig.github, siteConfig.linkedin, siteConfig.twitter],
       knowsAbout: [
         "React",
         "Next.js",
@@ -73,6 +77,8 @@ export const jsonLd = {
       url: `${siteConfig.url}/`,
       description:
         "Portfolio of Lokesh Yadav — Full Stack Engineer showcasing React, Next.js, Node.js, and real-time full-stack projects.",
+      publisher: { "@id": `${siteConfig.url}/#person` },
+      about: { "@id": `${siteConfig.url}/#person` },
     },
   ],
 };

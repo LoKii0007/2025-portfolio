@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: <Github size={20} />,
     label: "Github",
-    value: "https://github.com/LoKii0007",
+    value: "https://github.com/lokidotdev",
     type: "link",
   },
   {

@@ -1,6 +1,8 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Lokesh Yadav — Full Stack Engineer",
+  "short_name": "Lokesh Yadav",
+  "description": "Portfolio of Lokesh Yadav (Loki) — Full Stack Engineer building real-time web apps with React, Next.js, Node.js and PostgreSQL.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +17,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone"
 }
